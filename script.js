@@ -39,3 +39,6 @@ displayUnits();
 convertBtn.addEventListener('click',()=>{
 displayUnits();
 })
+inputNum.addEventListener('keypress',(e)=>{
+    if(e.key==='Enter'){displayUnits();}
+})
