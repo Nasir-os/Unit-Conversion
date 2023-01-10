@@ -6,53 +6,55 @@ html, * {
 }
 
 :root{
-    --background-color: #121212;
-    --cont-bg: #101a28;
-    --input-sec-bg:#6943ff;
-    --input-sec-color:white;
-    --color:#ccc1ff;
-    --unit-div-bg:#172539;
+    --primary-color: #f0ea73;;
+    --secondary-color: #000000;
+    --accent-color:hwb(240 10% 88% / 0.72);
+    --color:#ffff;
     --border-radius:8px;
 }
 body{
-    background-color: var(--background-color);
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
+    background-color: var(--secondary-color);
+    font-family: 'Nunito', sans-serif;
+    color: var(--color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .container{
+    background-color: var(--accent-color);
     width: 300px;
     height: 400px;
     margin: 2em;
-    background-color: var(--cont-bg);
     border-radius: var(--border-radius);
     text-align: center;
+    overflow: hidden;
 }
 .input-section{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
     flex-direction: column;
-    background-color: var(--input-sec-bg);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 1em;
     gap: 20px;
 }
 .input-section h1{
     font-size: 16px;
+    font-weight: 800;
 }
 .input-section input{
    font-size: 2rem;
     width:2em;
    background-color: transparent;
-   border:solid 1px white;
+   border:solid 1px var(--secondary-color);
    text-align: center;
-   color: var(--input-sec-color);
    border-radius: 3px;
 }
 .input-section button{
+    background-color: var(--secondary-color);
+    color: var(--color);
     border-radius: 2px;
     border: none;
     cursor: pointer;
@@ -75,15 +77,21 @@ body{
     padding: 1em;
     gap: 14px;
 }
+.units-section h5{
+    font-weight: 200;
+}
 .units-section div{
-    background-color: var(--unit-div-bg);
+    background-color: var(--secondary-color);
     color:var(--color);
     width: 100%;
-    padding: 1em;
+    padding: 0.9em;
     word-wrap: break-word;
     border-radius: var(--border-radius);
+    line-height: 18px;
 }
 .units-section p{
-    color:var(--input-sec-color);
     font-size:10px;
+}
+.units-section span{
+    color: var(--primary-color);
 }
