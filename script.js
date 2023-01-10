@@ -6,6 +6,7 @@ let gallonToLitter= document.querySelector('.g-to-l');
 let kilogramToPound= document.querySelector('.k-to-p');
 let poundToKilogram= document.querySelector('.p-to-k');
 const convertBtn = document.querySelector('.convert-btn');
+const unitSection =  document.querySelector('.units-section');
 
 let feet = 3.281;
 let gallon = 0.264;
@@ -19,21 +20,21 @@ inputNum.addEventListener('input',()=>{
 })
 
 
-function convertUnit(unit1,operator,num,unit2){
+function convertUnit(operator,num){
 if(operator === '*'){
 result = (numToBeConverted * num).toFixed(3);
 }else{
 result = (numToBeConverted / num).toFixed(3);
 }
-return `${numToBeConverted} ${unit1} = ${result} ${unit2}`;
+return result;
 }
 function displayUnits(){
-    meterToFeet.textContent =  convertUnit("meters","*",feet,"feet");
-    feetToMeter.textContent =  convertUnit("feet","/",feet,"meters");
-    literToGallon.textContent =  convertUnit("liters","*",gallon,"gallons");
-    gallonToLitter.textContent =  convertUnit("gallons","/",gallon,"liters");
-    kilogramToPound.textContent =  convertUnit("kilos","*",pound,"pounds");
-    poundToKilogram.textContent =  convertUnit("pound","/",pound,"kilos");
+    meterToFeet.textContent =  convertUnit("*",feet);
+    feetToMeter.textContent =  convertUnit("/",feet);
+    literToGallon.textContent =  convertUnit("*",gallon);
+    gallonToLitter.textContent =  convertUnit("/",gallon);
+    kilogramToPound.textContent =  convertUnit("*",pound);
+    poundToKilogram.textContent =  convertUnit("/",pound);
 }
 displayUnits();
 convertBtn.addEventListener('click',()=>{
@@ -42,3 +43,6 @@ displayUnits();
 inputNum.addEventListener('keypress',(e)=>{
     if(e.key==='Enter'){displayUnits();}
 })
+
+
+
