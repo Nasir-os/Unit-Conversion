@@ -7,6 +7,8 @@ let kilogramToPound= document.querySelector('.k-to-p');
 let poundToKilogram= document.querySelector('.p-to-k');
 const convertBtn = document.querySelector('.convert-btn');
 const unitSection =  document.querySelector('.units-section');
+let userInput = document.querySelectorAll('.user-input');
+
 
 let feet = 3.281;
 let gallon = 0.264;
@@ -14,9 +16,15 @@ let pound = 2.204;
 let result = 0;
 inputNum.value = 20;
 let numToBeConverted=20;
+userInput.forEach((input)=>input.textContent = numToBeConverted + " ");
 
 inputNum.addEventListener('input',()=>{
     numToBeConverted = Number(inputNum.value);
+userInput.forEach((input)=>input.textContent = numToBeConverted + " ");
+displayUnits()
+
+
+
 })
 
 
