@@ -24,13 +24,15 @@ body{
     align-items: center;
 }
 .container{
+    max-width: 500px;
     background-color: var(--accent-color);
-    width: 300px;
-    height: 400px;
     margin: 2em;
     border-radius: var(--border-radius);
     text-align: center;
     overflow: hidden;
+}
+.units-section , .input-section{
+    font-size: 1.4em;
 }
 .input-section{
     display: flex;
@@ -43,35 +45,21 @@ body{
     gap: 20px;
 }
 .input-section h1{
-    font-size: 16px;
     font-weight: 800;
 }
 .input-section input{
-   font-size: 2rem;
+    font-size: 3rem;
     width:2em;
    background-color: transparent;
    border:solid 1px var(--secondary-color);
    text-align: center;
    border-radius: 3px;
 }
-.input-section button{
-    background-color: var(--secondary-color);
-    color: var(--color);
-    border-radius: 2px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    padding: 4px 8px;
-    font-size: 10px;
-}
-.input-section button:active{
-    transform: scale(0.78);
-}
 .input-section input:focus{
     outline: none;
 }
+
 .units-section{
-    font-size: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -80,20 +68,25 @@ body{
     gap: 14px;
 }
 .units-section h5{
-    font-weight: 200;
+    font-weight: 100;
+    background-color: var(--accent-color);
+    color: var(--color);
+    padding: 5px;
+    letter-spacing: 0.5em;
 }
 .units-section div{
     background-color: var(--secondary-color);
     color:var(--color);
-    width: 100%;
-    padding: 0.9em;
     word-wrap: break-word;
     border-radius: var(--border-radius);
-    line-height: 18px;
+    text-align: center;
+    padding: 0.5em;
 }
 .units-section p{
-    font-size:10px;
+    padding-top: 20px;
+    font-weight: 300;
 }
 .units-section span{
     color: var(--primary-color);
+    font-weight: 800;
 }

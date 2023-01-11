@@ -5,7 +5,6 @@ let literToGallon= document.querySelector('.l-to-g');
 let gallonToLitter= document.querySelector('.g-to-l');
 let kilogramToPound= document.querySelector('.k-to-p');
 let poundToKilogram= document.querySelector('.p-to-k');
-const convertBtn = document.querySelector('.convert-btn');
 const unitSection =  document.querySelector('.units-section');
 let userInput = document.querySelectorAll('.user-input');
 
@@ -45,9 +44,6 @@ function displayUnits(){
     poundToKilogram.textContent =  convertUnit("/",pound);
 }
 displayUnits();
-convertBtn.addEventListener('click',()=>{
-displayUnits();
-})
 inputNum.addEventListener('keypress',(e)=>{
     if(e.key==='Enter'){displayUnits();}
 })
