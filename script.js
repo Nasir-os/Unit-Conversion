@@ -13,8 +13,8 @@ let feet = 3.281;
 let gallon = 0.264;
 let pound = 2.204;
 let result = 0;
-inputNum.value = 20;
-let numToBeConverted=20;
+inputNum.value = 2;
+let numToBeConverted=2;
 userInput.forEach((input)=>input.textContent = numToBeConverted + " ");
 
 inputNum.addEventListener('input',()=>{

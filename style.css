@@ -24,7 +24,7 @@ body{
     align-items: center;
 }
 .container{
-    max-width: 500px;
+    width: 500px;
     background-color: var(--accent-color);
     margin: 2em;
     border-radius: var(--border-radius);
@@ -32,7 +32,7 @@ body{
     overflow: hidden;
 }
 .units-section , .input-section{
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 .input-section{
     display: flex;
@@ -75,6 +75,7 @@ body{
     letter-spacing: 0.5em;
 }
 .units-section div{
+    min-width: 100%;
     background-color: var(--secondary-color);
     color:var(--color);
     word-wrap: break-word;
@@ -85,8 +86,10 @@ body{
 .units-section p{
     padding-top: 20px;
     font-weight: 300;
+    font-size: 0.8em;
 }
 .units-section span{
     color: var(--primary-color);
     font-weight: 800;
+    font-size: 1.3em;
 }
